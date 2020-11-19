@@ -499,8 +499,8 @@
             android:layout_marginTop="0dp"
             android:layout_marginBottom="4dp"
             android:orientation="horizontal">
-
             <ImageButton
+                android:id="@+id/individual_subscription_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -511,8 +511,8 @@
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/user"></ImageButton>
-
             <ImageButton
+                android:id="@+id/group_subscription_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -524,21 +524,8 @@
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/group"></ImageButton>
-
             <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/buttonborder"
-                android:paddingStart="5dp"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/add"></ImageButton>
-
-            <ImageButton
+                android:id="@+id/add_subscription_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -549,9 +536,22 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/community"></ImageButton>
-
+                android:src="@drawable/add"></ImageButton>
             <ImageButton
+                android:id="@+id/community_board_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonborder"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/community"></ImageButton>
+            <ImageButton
+                android:id="@+id/settings_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -563,8 +563,6 @@
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/settings"></ImageButton>
-
-
         </LinearLayout>
     </LinearLayout>
 

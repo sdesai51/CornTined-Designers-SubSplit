@@ -28,7 +28,7 @@ import android.provider.MediaStore;
 
 public class IndividualSubscription extends AppCompatActivity implements OnItemSelectedListener {
     Button btnGroupSubscription, btnIndividualSubscription;
-    ImageButton btnAdd, btnGroup, btnCommunity, btnSettings;
+    ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual;
     EditText edtSubscription, edtCategory, edtTotalCost;
     Spinner selectMonth, selectDay, selectYear, selectRenewal, selectCategory;
     private ImageView imageAddIcon;
@@ -178,7 +178,48 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
 //                }
             }
         });
+
+        //Bottom nav bar buttons initialization and functionality
+        btnAdd = (ImageButton) findViewById(R.id.add_subscription_button);
+        btnGroup = (ImageButton) findViewById(R.id.group_subscription_button);
+        btnIndividual = (ImageButton) findViewById(R.id.individual_subscription_button);
+        btnCommunity = (ImageButton) findViewById(R.id.community_board_button);
+        btnSettings = (ImageButton) findViewById(R.id.settings_button);
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(IndividualSubscription.this, IndividualSubscription.class);
+                startActivity(intent);
+            }
+        });
+        btnGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(IndividualSubscription.this, Subscriptions.class);
+                startActivity(intent);
+            }
+        });
+        btnIndividual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(IndividualSubscription.this, Subscriptions.class);
+                startActivity(intent);
+            }
+        });
+        btnCommunity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(IndividualSubscription.this, CommunityBoardMain.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
     //Methods to assist with image upload in form
     private void selectImage(Context context) {

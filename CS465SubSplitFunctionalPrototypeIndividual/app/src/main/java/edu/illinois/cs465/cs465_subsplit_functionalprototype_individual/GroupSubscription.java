@@ -26,6 +26,7 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
     public static final int PEEK_ACTIVITY_CODE = 1;
     private ArrayList<String> memberList;
     private Button addMemberButton;
+    ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual;
 //    private EditText searchText;
 
     @Override
@@ -38,6 +39,46 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
 
         addMemberButton = (Button) findViewById(R.id.add_members_button);
         addMemberButton.setOnClickListener(this);
+
+        btnAdd = (ImageButton) findViewById(R.id.add_subscription_button);
+        btnGroup = (ImageButton) findViewById(R.id.group_subscription_button);
+        btnIndividual = (ImageButton) findViewById(R.id.individual_subscription_button);
+        btnCommunity = (ImageButton) findViewById(R.id.community_board_button);
+        btnSettings = (ImageButton) findViewById(R.id.settings_button);
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(GroupSubscription.this, IndividualSubscription.class);
+                startActivity(intent);
+            }
+        });
+        btnGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(GroupSubscription.this, Subscriptions.class);
+                startActivity(intent);
+            }
+        });
+        btnIndividual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(GroupSubscription.this, Subscriptions.class);
+                startActivity(intent);
+            }
+        });
+        btnCommunity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(GroupSubscription.this, CommunityBoardMain.class);
+                startActivity(intent);
+            }
+        });
+
 
         if (!(memberList == null)) {
 //            String curr_name;
