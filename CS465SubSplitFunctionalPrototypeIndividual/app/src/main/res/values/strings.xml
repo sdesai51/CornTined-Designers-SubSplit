@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Login App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="total_cost">Total Cost</string>
+    <string name="renewal_interval">Renewal Interval</string>
+    <string name="subscription_name">Subscription Name</string>
+    <string name="category">Category</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
+    <string name="year">Year</string>
+    <string name="individual_subscription">Individual Subscription</string>
+    <string name="group_subscription">Continue to Group Payment</string>
+
+</resources>
+<!--<resources>-->
+<!--    <string name="app_name">CS465-SubSplit-FunctionalPrototype-Individual</string>-->
+<!--</resources>-->

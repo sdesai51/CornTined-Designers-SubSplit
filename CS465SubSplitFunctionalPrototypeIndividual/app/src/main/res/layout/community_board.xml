@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroupSubscription">
+
+    <LinearLayout
+        android:id="@+id/wholescreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FDBFBD"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="10dp">
+
+        <LinearLayout
+            android:id="@+id/toptworows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/topbuttons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/profile"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#ffffff"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/profile"></ImageButton>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="2"
+                    android:backgroundTint="#ffffff"
+                    android:drawableLeft="@drawable/searchh"
+                    android:text="Search"
+                    android:textColor="#616161">
+
+                </com.google.android.material.button.MaterialButton>
+
+                <ImageButton
+                    android:id="@+id/myDms"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#ffffff"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dms"></ImageButton>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="2"
+                android:backgroundTint="#ffffff"
+                android:drawableLeft="@drawable/plus"
+                android:text="New Post"
+                android:textColor="#616161">
+
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/textbox2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/outline"
+            android:backgroundTint="#ffffff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/posterinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/profile"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nandita Ravikumar"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:typeface="serif"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="4 hours ago"
+                        android:textColor="#000000"
+                        android:textStyle="italic"
+                        android:typeface="serif"></TextView>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="2"
+                    android:backgroundTint="#ec796c"
+                    android:text="Send DM"></Button>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Hi! I am a freshman at Illinois taking CHEM 101.It's so hard :(\nI want to use Chegg for the class but broke college student haha. Looking for people to split account with!! Message me if interested :)"
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/borderlight"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:backgroundTint="@color/white"
+                    android:drawableTint="#2196F3"
+                    android:paddingLeft="50dp"
+                    android:src="@drawable/like"></ImageButton>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="4"
+                    android:textAlignment="center"
+                    android:textSize="16sp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:text="Like"
+                    android:textAlignment="center"
+                    android:textSize="16sp"></TextView>
+
+                <ImageButton
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:backgroundTint="@color/white"
+                    android:paddingLeft="50dp"
+                    android:src="@drawable/comment"></ImageButton>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="4"
+                    android:text="Comment"
+                    android:textAlignment="center"
+                    android:textSize="16sp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/profile"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Suzy Ahn"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:typeface="serif"></TextView>
+
+                    <TextView
+                        android:layout_width="229dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Interested!! I'm also struggling in CHEM 101 haha"
+                        android:textColor="#000000"
+                        android:typeface="serif"></TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="2 hours ago"
+                    android:textColor="#000000"
+                    android:textSize="11sp"
+                    android:textStyle="italic"
+                    android:typeface="serif"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/comment2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/profile"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Samuel Dovgin"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:typeface="serif"></TextView>
+
+                    <TextView
+                        android:layout_width="229dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Hey I go to UIUC too! I'm also interested to split Chegg. All the other classes are too hard :("
+                        android:textColor="#000000"
+                        android:typeface="serif"></TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="30 minutes ago"
+                    android:textColor="#000000"
+                    android:textSize="11sp"
+                    android:textStyle="italic"
+                    android:typeface="serif"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/post2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/outline"
+            android:backgroundTint="#FFFFFF"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/posterinfo2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/profile"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Simran Desai"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:typeface="serif"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="16 hours ago"
+                        android:textColor="#000000"
+                        android:textStyle="italic"
+                        android:typeface="serif"></TextView>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="2"
+                    android:backgroundTint="#ec796c"
+                    android:text="Send DM"></Button>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Hey! I am looking for people to split a Netflix account with before the new season of Schitt's Creek releases. "
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/borderlight"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:backgroundTint="@color/white"
+                    android:drawableTint="#2196F3"
+                    android:paddingLeft="50dp"
+                    android:src="@drawable/like"></ImageButton>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:text="12"
+                    android:textAlignment="center"
+                    android:textSize="16sp"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:text="Like"
+                    android:textAlignment="center"
+                    android:textSize="16sp"></TextView>
+
+                <ImageButton
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:backgroundTint="@color/white"
+                    android:paddingLeft="50dp"
+                    android:src="@drawable/comment"></ImageButton>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="4"
+                    android:text="Comment"
+                    android:textAlignment="center"
+                    android:textSize="16sp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/comment4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/profile"></ImageView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Zikun Chen"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:typeface="serif"></TextView>
+
+                    <TextView
+                        android:layout_width="229dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Hey, I already have an account and want to save a little bit more money. Do you want to join my group? DM me!"
+                        android:textColor="#000000"
+                        android:typeface="serif"></TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="13 hours ago"
+                    android:textColor="#000000"
+                    android:textSize="11sp"
+                    android:textStyle="italic"
+                    android:typeface="serif"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="10dp"
+            android:background="#000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/buttonborder"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/user"></ImageButton>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonborder"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/group"></ImageButton>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonborder"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/add"></ImageButton>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonbordersel"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/community"></ImageButton>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonborder"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/settings"></ImageButton>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
