@@ -70,6 +70,7 @@
                         android:id="@+id/added_user_display_0"
                         android:layout_height="wrap_content"
                         android:layout_width="180dp"
+                        android:visibility="invisible"
                         android:layout_row="0"
                         android:layout_column="0"
                         android:layout_margin="5dp"
@@ -81,6 +82,7 @@
                         android:id="@+id/added_user_display_1"
                         android:layout_height="wrap_content"
                         android:layout_width="180dp"
+                        android:visibility="invisible"
                         android:layout_row="0"
                         android:layout_column="1"
                         android:layout_margin="5dp"
@@ -92,6 +94,7 @@
                         android:id="@+id/added_user_display_2"
                         android:layout_height="wrap_content"
                         android:layout_width="180dp"
+                        android:visibility="invisible"
                         android:layout_row="1"
                         android:layout_column="0"
                         android:layout_margin="5dp"
@@ -103,6 +106,7 @@
                         android:id="@+id/added_user_display_3"
                         android:layout_height="wrap_content"
                         android:layout_width="180dp"
+                        android:visibility="invisible"
                         android:layout_row="1"
                         android:layout_column="1"
                         android:layout_margin="5dp"
@@ -114,6 +118,7 @@
                         android:id="@+id/added_user_display_4"
                         android:layout_height="wrap_content"
                         android:layout_width="180dp"
+                        android:visibility="invisible"
                         android:layout_row="2"
                         android:layout_column="0"
                         android:layout_margin="5dp"
@@ -167,31 +172,32 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="horizontal"
-                android:background="@drawable/border">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:background="@drawable/border">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Evenly (default)"
-                    android:paddingTop="10dp"
-                    android:textSize="20dp"
-                    android:paddingLeft="20dp"
-                    android:padding="5dp"/>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Evenly (default)"-->
+<!--                    android:paddingTop="10dp"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:paddingLeft="20dp"-->
+<!--                    android:padding="5dp"/>-->
 
-<!--                <ImageView-->
-<!--                    android:layout_width="40dp"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:paddingRight="10dp"-->
-<!--                    android:layout_alignParentRight="true"-->
-<!--                    android:src="@drawable/drop_down_icon"/>-->
-            </RelativeLayout>
+<!--&lt;!&ndash;                <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="40dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:paddingRight="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_alignParentRight="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:src="@drawable/drop_down_icon"/>&ndash;&gt;-->
+<!--            </RelativeLayout>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -208,18 +214,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Customized"
+                        android:text="Customization"
                         android:paddingTop="10dp"
                         android:textSize="20dp"
                         android:paddingLeft="20dp"
                         android:padding="5dp"/>
 
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="match_parent"
-                        android:paddingRight="10dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/drop_down_icon"/>
+<!--                    <ImageView-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:paddingRight="10dp"-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:src="@drawable/drop_down_icon"-->
+<!--                        android:backgroundTint="@color/teal_200"/>-->
                 </RelativeLayout>
 
                 <ScrollView
@@ -233,6 +240,8 @@
                         android:paddingBottom="10dp">
 
                         <RelativeLayout
+                            android:id="@+id/show_split_0"
+                            android:visibility="invisible"
                             android:layout_width="300dp"
                             android:layout_height="40dp"
                             android:orientation="horizontal"
@@ -242,6 +251,7 @@
                             android:background="@drawable/button_border">
 
                             <TextView
+                                android:id="@+id/split_user_0"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="User A"
@@ -253,11 +263,13 @@
                                 android:layout_height="match_parent"
                                 android:paddingRight="10dp"
                                 android:textSize="20dp"
-                                android:text="$ 3.00"
+                                android:text="$ 1.00"
                                 android:layout_alignParentRight="true"/>
                         </RelativeLayout>
 
                         <RelativeLayout
+                            android:id="@+id/show_split_1"
+                            android:visibility="invisible"
                             android:layout_width="300dp"
                             android:layout_height="40dp"
                             android:orientation="horizontal"
@@ -267,6 +279,7 @@
                             android:background="@drawable/button_border">
 
                             <TextView
+                                android:id="@+id/split_user_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="User B"
@@ -278,11 +291,13 @@
                                 android:layout_height="match_parent"
                                 android:paddingRight="10dp"
                                 android:textSize="20dp"
-                                android:text="$ 5.00"
+                                android:text="$ 1.00"
                                 android:layout_alignParentRight="true"/>
                         </RelativeLayout>
 
                         <RelativeLayout
+                            android:id="@+id/show_split_2"
+                            android:visibility="invisible"
                             android:layout_width="300dp"
                             android:layout_height="40dp"
                             android:orientation="horizontal"
@@ -292,6 +307,7 @@
                             android:background="@drawable/button_border">
 
                             <TextView
+                                android:id="@+id/split_user_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="User C"
@@ -308,6 +324,8 @@
                         </RelativeLayout>
 
                         <RelativeLayout
+                            android:id="@+id/show_split_3"
+                            android:visibility="invisible"
                             android:layout_width="300dp"
                             android:layout_height="40dp"
                             android:orientation="horizontal"
@@ -317,6 +335,35 @@
                             android:background="@drawable/button_border">
 
                             <TextView
+                                android:id="@+id/split_user_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="User D"
+                                android:textSize="20dp"
+                                android:paddingLeft="10dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingRight="10dp"
+                                android:textSize="20dp"
+                                android:text="$ 1.00"
+                                android:layout_alignParentRight="true"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/show_split_4"
+                            android:visibility="invisible"
+                            android:layout_width="300dp"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:paddingTop="3dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/button_border">
+
+                            <TextView
+                                android:id="@+id/split_user_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="User E"
@@ -328,7 +375,7 @@
                                 android:layout_height="match_parent"
                                 android:paddingRight="10dp"
                                 android:textSize="20dp"
-                                android:text="$ 0.00"
+                                android:text="$ 1.00"
                                 android:layout_alignParentRight="true"/>
                         </RelativeLayout>
                     </LinearLayout>
@@ -358,6 +405,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/save_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
@@ -365,7 +413,6 @@
                 android:text="Save"
                 android:textSize="15dp"
                 android:textStyle="bold"/>
-
         </LinearLayout>
 
         <View
@@ -393,7 +440,7 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/user"></ImageButton>
+                android:src="@drawable/user"/>
             <ImageButton
                 android:id="@+id/group_subscription_button"
                 android:layout_width="0dp"
@@ -406,7 +453,7 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/group"></ImageButton>
+                android:src="@drawable/group"/>
             <ImageButton
                 android:id="@+id/add_subscription_button"
                 android:layout_width="0dp"
@@ -419,7 +466,7 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/add"></ImageButton>
+                android:src="@drawable/add"/>
             <ImageButton
                 android:id="@+id/community_board_button"
                 android:layout_width="0dp"
@@ -432,7 +479,7 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/community"></ImageButton>
+                android:src="@drawable/community"/>
             <ImageButton
                 android:id="@+id/settings_button"
                 android:layout_width="0dp"
@@ -445,8 +492,9 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/settings"></ImageButton>
+                android:src="@drawable/settings"/>
         </LinearLayout>
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

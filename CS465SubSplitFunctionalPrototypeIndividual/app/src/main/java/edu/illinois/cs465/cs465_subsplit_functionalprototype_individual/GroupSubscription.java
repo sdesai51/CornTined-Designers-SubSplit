@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class GroupSubscription extends AppCompatActivity implements View.OnClickListener {
     public static final int PEEK_ACTIVITY_CODE = 1;
     private ArrayList<String> memberList;
-    private Button addMemberButton;
+    private Button addMemberButton, btnSave;
     ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual;
 //    private EditText searchText;
 
@@ -33,18 +33,44 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.group_subscription);
-        setTitle("Group Payment Setting");
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Group Payment Setting");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         memberList = (ArrayList<String>) getIntent().getSerializableExtra("memberList");
 
         addMemberButton = (Button) findViewById(R.id.add_members_button);
         addMemberButton.setOnClickListener(this);
 
+        if (!(memberList == null)) {
+            String curr_name;
+            for (int counter = 0; (counter < 5) && (counter < memberList.size()); counter++) {
+                curr_name = memberList.get(counter);
+                String member_display_id = "added_user_display_" + Integer.toString(counter);
+                int resourceId = getResources().getIdentifier(member_display_id, "id", getPackageName());
+                Button curr_button = (Button) findViewById(resourceId);
+                curr_button.setText(curr_name);
+                curr_button.setVisibility(View.VISIBLE);
+
+                String member_split_id = "split_user_" + Integer.toString(counter);
+                int splitId = getResources().getIdentifier(member_split_id, "id", getPackageName());
+                TextView split_tv = (TextView) findViewById(splitId);
+                split_tv.setText(curr_name);
+
+                String show_split_id = "show_split_" + Integer.toString(counter);
+                int showSplitId = getResources().getIdentifier(show_split_id, "id", getPackageName());
+                RelativeLayout split_rl = (RelativeLayout) findViewById(showSplitId);
+                split_rl.setVisibility(View.VISIBLE);
+            }
+        }
+
         btnAdd = (ImageButton) findViewById(R.id.add_subscription_button);
         btnGroup = (ImageButton) findViewById(R.id.group_subscription_button);
         btnIndividual = (ImageButton) findViewById(R.id.individual_subscription_button);
         btnCommunity = (ImageButton) findViewById(R.id.community_board_button);
         btnSettings = (ImageButton) findViewById(R.id.settings_button);
+        btnSave = (Button) findViewById(R.id.save_button);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,85 +104,15 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
                 startActivity(intent);
             }
         });
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(GroupSubscription.this, Subscriptions.class);
+                startActivity(intent);
+            }
+        });
 
-
-        if (!(memberList == null)) {
-//            String curr_name;
-//            for (int counter = 0; counter < memberList.size(); counter++) {
-//                curr_name = memberList.get(counter);
-//                String member_display_id = "added_user_display_" + Integer.toString(counter);
-//                int resourceId = getResources().getIdentifier(member_display_id, "drawable", getPackageName());
-//                Button curr_button = (Button) findViewById(resourceId);
-//                curr_button.setText(curr_name);
-//            }
-            String curr_name = memberList.get(0);
-            Button curr_button = (Button) findViewById(R.id.added_user_display_1);
-            curr_button.setText(curr_name);
-
-//            String curr_name = memberList.get(0);
-//            String member_display_id = "added_user_display_" + Integer.toString(0);
-//            int resourceId = getResources().getIdentifier(member_display_id, "drawable", getPackageName());
-//            Button curr_button = (Button) findViewById(resourceId);
-//            curr_button.setText(curr_name);
-        }
-
-//        addMemberButton = (Button) this.findViewById(R.id.add_members_button);
-//        final EditText searchText = (EditText)findViewById(R.id.add_members_text);
-//
-//        /*
-//            Add member Button
-//        */
-//        addMemberButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(searchText.getText().toString().isEmpty())
-//                {
-//                    Toast.makeText(getApplicationContext(), "Please type in user", Toast.LENGTH_SHORT).show();
-//                } else {
-//                    String addedMemberName = searchText.getText().toString();
-//                    Toast.makeText(getApplicationContext(), "Added member :  " + (addedMemberName), Toast.LENGTH_SHORT).show();
-//
-//                    LinearLayout parentLayout = (LinearLayout)findViewById(R.id.added_display);
-//
-//                    LinearLayout childLayout = new LinearLayout(MainActivity.this);
-//                    childLayout.setOrientation(LinearLayout.HORIZONTAL);
-//                    childLayout.setBackgroundColor(Color.parseColor("#ffbeb8"));
-//                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-//                    params.weight = 1.0f;
-//                    params.gravity = Gravity.CENTER;
-//                    params.bottomMargin = 15;
-//                    childLayout.setLayoutParams(params);
-////
-////                    RelativeLayout childLayout=new RelativeLayout(MainActivity.this);
-////                    RelativeLayout.LayoutParams layoutParams=new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-////                    layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
-////                    layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT, RelativeLayout.TRUE);
-//
-////                    TextView entered_txt = new TextView(MainActivity.this);
-////                    entered_txt.setText(addedMemberName);
-////                    entered_txt.setTextSize(30);
-////                    entered_txt.setGravity(Gravity.CENTER | Gravity.BOTTOM);
-//////                    entered_txt.setLayoutParams(layoutParams);
-////
-////                    ImageButton btn = new ImageButton(MainActivity.this);
-////                    btn.setImageResource(R.drawable.searchh);
-////                    btn.setBackgroundColor(Color.parseColor("#ffbeb8"));
-//////                    btn.setLayoutParams(layoutParams);
-//
-//                    Button btn = new Button(MainActivity.this);
-//                    btn.setText(addedMemberName);
-//                    btn.setTextSize(20);
-//                    btn.setBackgroundColor(Color.parseColor("#ffbeb8"));
-//                    btn.setGravity(Gravity.CENTER_HORIZONTAL);
-//
-////                    btn.setLayoutParams(layoutParams);
-//
-////                    childLayout.addView(entered_txt);
-//                    childLayout.addView(btn);
-//                    parentLayout.addView(childLayout);
-//                }
-//            }
-//        });
     }
 
     @Override

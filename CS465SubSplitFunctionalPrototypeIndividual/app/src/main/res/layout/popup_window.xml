@@ -20,6 +20,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/back_arrow"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"

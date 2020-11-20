@@ -24,6 +24,8 @@ public class AddMemberActivity extends AppCompatActivity {
     private Button addMemberButton;
     private EditText searchText;
     private Button finishAddButton;
+    ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +97,47 @@ public class AddMemberActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        btnAdd = (ImageButton) findViewById(R.id.add_subscription_button);
+        btnGroup = (ImageButton) findViewById(R.id.group_subscription_button);
+        btnIndividual = (ImageButton) findViewById(R.id.individual_subscription_button);
+        btnCommunity = (ImageButton) findViewById(R.id.community_board_button);
+        btnSettings = (ImageButton) findViewById(R.id.settings_button);
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(AddMemberActivity.this, IndividualSubscription.class);
+                startActivity(intent);
+            }
+        });
+        btnGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(AddMemberActivity.this, Subscriptions.class);
+                startActivity(intent);
+            }
+        });
+        btnIndividual.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(AddMemberActivity.this, Subscriptions.class);
+                startActivity(intent);
+            }
+        });
+        btnCommunity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(AddMemberActivity.this, CommunityBoardMain.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

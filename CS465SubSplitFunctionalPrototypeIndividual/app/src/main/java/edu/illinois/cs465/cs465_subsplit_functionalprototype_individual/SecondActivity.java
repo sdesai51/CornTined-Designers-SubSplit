@@ -2,9 +2,11 @@ package edu.illinois.cs465.cs465_subsplit_functionalprototype_individual;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class SecondActivity extends Activity {
+    ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

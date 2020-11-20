@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#FFBEB8">
+    android:layout_height="match_parent"
+    android:background="@color/theme"
+    tools:context=".GroupSubscription">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -18,6 +22,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/back_arrow"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -61,29 +66,31 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="100dp"
             android:layout_marginEnd="0dp"
+            android:layout_marginLeft="40dp"
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="85dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
                 android:background="@color/white">
 
-                <ImageView
+                <Button
+                    android:id="@+id/dm_view"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:layout_marginLeft="20dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:src="@drawable/profile">
-                </ImageView>
+                    android:drawableLeft="@drawable/profilesmall">
+                </Button>
 
                 <LinearLayout
                     android:layout_width="330dp"
                     android:layout_height="100dp"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
 
                     <TextView
                         android:layout_width="300dp"
@@ -124,10 +131,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="85dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
                 android:background="@color/white">
 
                 <ImageView
@@ -184,10 +189,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="85dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
                 android:background="@color/white">
 
                 <ImageView
@@ -244,10 +247,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="85dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
                 android:background="@color/white">
 
                 <ImageView
@@ -304,10 +305,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="85dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
                 android:background="@color/white">
 
                 <ImageView
@@ -364,10 +363,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="400dp"
+                android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
                 android:background="@color/white">
 
                 <ImageView
@@ -428,35 +425,21 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="640dp"
+            android:layout_marginTop="645dp"
+            android:layout_marginBottom="10dp"
             android:background="#000000"/>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="17dp"
             android:layout_marginEnd="17dp"
-            android:layout_marginTop="650dp"
+            android:layout_marginTop="655dp"
             android:layout_marginBottom="4dp"
             android:orientation="horizontal">
-
             <ImageButton
+                android:id="@+id/individual_subscription_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="5dp"
-                android:background="@drawable/buttonborder"
-                android:paddingStart="5dp"
-                android:paddingTop="5dp"
-                android:paddingRight="5dp"
-                android:paddingBottom="5dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/user"></ImageButton>
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/buttonborder"
                 android:paddingStart="5dp"
@@ -464,9 +447,9 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/group"></ImageButton>
-
+                android:src="@drawable/user"/>
             <ImageButton
+                android:id="@+id/group_subscription_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -477,9 +460,22 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/add"></ImageButton>
-
+                android:src="@drawable/group"/>
             <ImageButton
+                android:id="@+id/add_subscription_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonborder"
+                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/add"/>
+            <ImageButton
+                android:id="@+id/community_board_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -490,9 +486,9 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/community"></ImageButton>
-
+                android:src="@drawable/community"/>
             <ImageButton
+                android:id="@+id/settings_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -503,12 +499,12 @@
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/settings"></ImageButton>
-
-
+                android:src="@drawable/settings"/>
         </LinearLayout>
 
 
     </RelativeLayout>
 
-</ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

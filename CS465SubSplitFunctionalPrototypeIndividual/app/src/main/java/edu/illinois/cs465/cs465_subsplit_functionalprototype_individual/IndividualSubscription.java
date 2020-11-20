@@ -172,10 +172,18 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
 //                }
 //                else {
 //                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
-                    Intent intent= new Intent(IndividualSubscription.this,SecondActivity.class);
-                    intent.putExtra("data",String.valueOf(selectRenewal.getSelectedItem()));
+                    Intent intent= new Intent(IndividualSubscription.this,Subscriptions.class);
+//                    intent.putExtra("data",String.valueOf(selectRenewal.getSelectedItem()));
                     startActivity(intent);
 //                }
+            }
+        });
+        btnGroupSubscription.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(IndividualSubscription.this, GroupSubscription.class);
+                startActivity(intent);
             }
         });
 

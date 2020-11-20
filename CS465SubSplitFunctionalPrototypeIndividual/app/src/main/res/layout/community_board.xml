@@ -37,7 +37,7 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/profile"></ImageButton>
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="10dp"
@@ -47,7 +47,7 @@
                     android:text="Search"
                     android:textColor="#616161">
 
-                </com.google.android.material.button.MaterialButton>
+                </Button>
 
                 <ImageButton
                     android:id="@+id/myDms"
@@ -61,7 +61,7 @@
                     android:src="@drawable/dms"></ImageButton>
             </LinearLayout>
 
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="10dp"
@@ -72,7 +72,7 @@
                 android:text="New Post"
                 android:textColor="#616161">
 
-            </com.google.android.material.button.MaterialButton>
+            </Button>
         </LinearLayout>
 
         <LinearLayout
@@ -93,12 +93,13 @@
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
-                <ImageView
+                <ImageButton
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitStart"
-                    android:src="@drawable/profile"></ImageView>
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/profile"></ImageButton>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -324,12 +325,14 @@
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/profile_"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:scaleType="fitStart"
-                    android:src="@drawable/profile"></ImageView>
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/profile"></ImageButton>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -358,6 +361,7 @@
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/send_DM_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="5dp"
@@ -467,7 +471,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:fontFamily="sans-serif-light"
-                        android:text="Hey, I already have an account and want to save a little bit more money. Do you want to join my group? DM me!"
+                        android:text="Hey, I already have an account and want to save a little bit more money."
                         android:textColor="#000000"
                         android:typeface="serif"></TextView>
                 </LinearLayout>
@@ -530,7 +534,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/buttonbordersel"
+                android:background="@drawable/buttonborder"
                 android:paddingStart="5dp"
                 android:paddingTop="5dp"
                 android:paddingRight="5dp"
@@ -543,7 +547,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/buttonborder"
+                android:background="@drawable/buttonbordersel"
                 android:paddingStart="5dp"
                 android:paddingTop="5dp"
                 android:paddingRight="5dp"
