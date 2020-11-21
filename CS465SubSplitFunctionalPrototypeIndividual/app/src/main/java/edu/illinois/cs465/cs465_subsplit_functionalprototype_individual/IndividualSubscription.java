@@ -3,6 +3,7 @@ package edu.illinois.cs465.cs465_subsplit_functionalprototype_individual;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,6 +33,7 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
     EditText edtSubscription, edtCategory, edtTotalCost;
     Spinner selectMonth, selectDay, selectYear, selectRenewal, selectCategory;
     private ImageView imageAddIcon;
+    String total;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,32 +160,43 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
             @Override
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
-//                if(edtSubscription.getText().toString().length()==0){
-//                    edtSubscription.setError("Subscription Name Not Entered");
-//                    edtSubscription.requestFocus();
-//                }
-//                if(edtCategory.getText().toString().length()==0){
-//                    edtCategory.setError("Category Not Entered");
-//                    edtCategory.requestFocus();
-//                }
-//                if(edtTotalCost.getText().toString().length()==0){
-//                    edtTotalCost.setError("Total Cost is Required");
-//                    edtTotalCost.requestFocus();
-//                }
-//                else {
+                if(edtSubscription.getText().toString().length()==0){
+                    edtSubscription.setError("Subscription Name is Required");
+                    edtSubscription.requestFocus();
+                }
+                if(edtTotalCost.getText().toString().length()==0){
+                    edtTotalCost.setError("Total Cost is Required");
+                    edtTotalCost.requestFocus();
+                }
+                else {
 //                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                     Intent intent= new Intent(IndividualSubscription.this,Subscriptions.class);
 //                    intent.putExtra("data",String.valueOf(selectRenewal.getSelectedItem()));
                     startActivity(intent);
-//                }
+                }
             }
         });
         btnGroupSubscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent intent = new Intent(IndividualSubscription.this, GroupSubscription.class);
-                startActivity(intent);
+//                if(edtSubscription.getText().toString().length()==0){
+//                    edtSubscription.setError("Subscription Name is Required");
+//                    edtSubscription.requestFocus();
+//                }
+//                if(edtTotalCost.getText().toString().length()==0){
+//                    edtTotalCost.setError("Total Cost is Required");
+//                    edtTotalCost.requestFocus();
+//                }
+//                else {
+                    Log.v("EditText", edtTotalCost.getText().toString());
+                    total = edtTotalCost.getText().toString();
+                    Intent intent = new Intent(IndividualSubscription.this, GroupSubscription.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("cost_from_ind", total);
+                    intent.putExtras(extras);
+                    startActivity(intent);
+//                }
             }
         });
 

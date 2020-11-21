@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Gravity;
@@ -27,7 +28,10 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
     private ArrayList<String> memberList;
     private Button addMemberButton, btnSave;
     ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual;
+    int numMembers;
+    String totalCost, cost;
 //    private EditText searchText;
+//    String totalCost = getIntent().getStringExtra("data");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +42,20 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
+        cost = getIntent().getExtras().getString("cost_from_ind");
+//        if (getIntent().hasExtra("cost")){
+//            totalCost = getIntent().getStringExtra("cost");
+//        }
+//        Bundle intentExtras = getIntent().getExtras();
+//        totalCost = intentExtras.get("cost").toString();
+
         memberList = (ArrayList<String>) getIntent().getSerializableExtra("memberList");
 
         addMemberButton = (Button) findViewById(R.id.add_members_button);
         addMemberButton.setOnClickListener(this);
 
         if (!(memberList == null)) {
+            numMembers = memberList.size();
             String curr_name;
             for (int counter = 0; (counter < 5) && (counter < memberList.size()); counter++) {
                 curr_name = memberList.get(counter);
@@ -52,7 +64,16 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
                 Button curr_button = (Button) findViewById(resourceId);
                 curr_button.setText(curr_name);
                 curr_button.setVisibility(View.VISIBLE);
-
+                
+                String member_split_cost = "split_user_cost_" + Integer.toString(counter);
+                int splitCost = getResources().getIdentifier(member_split_cost, "id", getPackageName());
+                TextView split_cost_text = (TextView) findViewById(splitCost);
+                int split = 0;
+                if (getIntent().hasExtra("cost")){
+                    totalCost = getIntent().getExtras().getString("cost");
+                    split = Integer.parseInt(totalCost)/numMembers;
+                }
+                split_cost_text.setText("$" + Integer.toString(split) + ".00");
                 String member_split_id = "split_user_" + Integer.toString(counter);
                 int splitId = getResources().getIdentifier(member_split_id, "id", getPackageName());
                 TextView split_tv = (TextView) findViewById(splitId);
@@ -120,6 +141,9 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
         if (v.getId() == R.id.add_members_button) {
             Intent intent = new Intent(this, AddMemberActivity.class);
             startActivity(intent);
+            Bundle extras = new Bundle();
+            extras.putString("cost_from_group", cost);
+            intent.putExtras(extras);
             startActivityForResult(intent, PEEK_ACTIVITY_CODE);
         }
     }

@@ -25,7 +25,7 @@ public class AddMemberActivity extends AppCompatActivity {
     private EditText searchText;
     private Button finishAddButton;
     ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual;
-
+    String cost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class AddMemberActivity extends AppCompatActivity {
         finishAddButton = (Button) this.findViewById(R.id.finish_add_button);
         final EditText searchText = (EditText)findViewById(R.id.add_members_search_text);
 
+        cost = getIntent().getExtras().getString("cost_from_group");
         /*
             Add member Button
         */
@@ -94,6 +95,7 @@ public class AddMemberActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(AddMemberActivity.this, GroupSubscription.class);
                 intent.putExtra("memberList", memberList);
+                intent.putExtra("cost", cost);
                 startActivity(intent);
             }
         });
