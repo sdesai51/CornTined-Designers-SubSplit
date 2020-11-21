@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/theme"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -16,6 +17,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="2dp"
+            android:layout_weight="1"
+            android:gravity="center"
             android:background="#aaaaaa">
 
             <TextView
@@ -58,12 +61,14 @@
                 android:id="@+id/added_display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
+                    android:layout_weight="1"
                     android:columnCount="2">
 
                     <Button
@@ -137,6 +142,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="2dp"
+            android:gravity="center"
+            android:layout_weight="1"
             android:background="#aaaaaa">
 
             <TextView
@@ -433,6 +440,9 @@
             android:layout_marginEnd="17dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/theme"
             android:orientation="horizontal">
             <ImageButton
                 android:id="@+id/individual_subscription_button"

@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="horizontal"
+    android:background="@color/theme"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,14 +30,14 @@
                 android:layout_marginHorizontal="50px"
                 android:text="Create Subscription"
                 android:gravity="left"
-                android:textSize="20sp"
-                android:fontFamily="@font/roboto_regular"/>
+                android:textSize="20sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
+            android:background="@color/white"
             android:layout_gravity="fill"
             android:layout_weight=".8">
             <ImageView
@@ -59,7 +60,6 @@
                     android:hint="@string/subscription_name"
                     android:layout_marginRight="20dp"
                     android:padding="15dp"
-                    android:fontFamily="@font/roboto_regular"
                     android:background="@drawable/et_custom"
                     android:textSize="15sp"
                     android:textColor="@android:color/black"
@@ -71,7 +71,6 @@
                     android:hint="@string/category"
                     android:layout_marginRight="20dp"
                     android:padding="15dp"
-                    android:fontFamily="@font/roboto_regular"
                     android:background="@drawable/et_custom"
                     android:textSize="15sp"
                     android:layout_marginVertical="50px"
@@ -82,6 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:background="@color/white"
             android:gravity="center">
             <EditText
                 android:id="@+id/total_cost"
@@ -91,7 +91,6 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
                 android:padding="15dp"
-                android:fontFamily="@font/roboto_regular"
                 android:background="@drawable/et_custom"
                 android:textSize="15sp"
                 android:textColor="@android:color/black"
@@ -103,7 +102,6 @@
                 android:hint="@string/renewal_interval"
                 android:layout_marginRight="20dp"
                 android:padding="15dp"
-                android:fontFamily="@font/roboto_regular"
                 android:background="@drawable/et_custom"
                 android:textSize="15sp"
                 android:layout_weight="1"/>
@@ -112,13 +110,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:background="@color/white"
             android:gravity="center"
             android:layout_weight=".5">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sign-up Date"
-                android:fontFamily="@font/roboto_regular"
                 android:textSize="15sp"
                 android:layout_marginLeft="20dp"/>
         </LinearLayout>
@@ -126,6 +124,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:background="@color/white"
             android:gravity="center">
             <!-- Spinner Element -->
             <Spinner
@@ -136,7 +135,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:padding="20dp"
-                android:fontFamily="@font/roboto_regular"
                 android:background="@drawable/et_custom"
                 android:textSize="15sp"
                 android:layout_weight="1"/>
@@ -148,7 +146,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:padding="15dp"
-                android:fontFamily="@font/roboto_regular"
                 android:background="@drawable/et_custom"
                 android:textSize="15sp"
                 android:layout_weight="1"/>
@@ -160,7 +157,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:padding="10dp"
-                android:fontFamily="@font/roboto_regular"
                 android:background="@drawable/et_custom"
                 android:textSize="15sp"
                 android:layout_weight="1"/>
@@ -170,6 +166,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
+            android:background="@color/white"
             android:layout_weight="1">
             <Button
                 android:id="@+id/individual_subscription"
@@ -178,7 +175,6 @@
                 android:background="@drawable/btn_custom"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:fontFamily="@font/roboto_regular"
                 android:textColor="@android:color/black"
                 android:text="@string/individual_subscription"
                 android:paddingVertical="140px"
@@ -192,7 +188,6 @@
                 android:background="@drawable/btn_custom"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:fontFamily="@font/roboto_regular"
                 android:textColor="@android:color/black"
                 android:text="@string/group_subscription"
                 android:paddingVertical="140px"
@@ -213,6 +208,7 @@
             android:layout_marginEnd="17dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="4dp"
+            android:background="@color/theme"
             android:orientation="horizontal">
             <ImageButton
                 android:id="@+id/individual_subscription_button"

@@ -64,16 +64,16 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
                 Button curr_button = (Button) findViewById(resourceId);
                 curr_button.setText(curr_name);
                 curr_button.setVisibility(View.VISIBLE);
-                
+
                 String member_split_cost = "split_user_cost_" + Integer.toString(counter);
                 int splitCost = getResources().getIdentifier(member_split_cost, "id", getPackageName());
                 TextView split_cost_text = (TextView) findViewById(splitCost);
-                int split = 0;
+                float split = 0;
                 if (getIntent().hasExtra("cost")){
                     totalCost = getIntent().getExtras().getString("cost");
-                    split = Integer.parseInt(totalCost)/numMembers;
+                    split = Float.parseFloat(totalCost)/numMembers;
                 }
-                split_cost_text.setText("$" + Integer.toString(split) + ".00");
+                split_cost_text.setText("$" + Float.toString(split));
                 String member_split_id = "split_user_" + Integer.toString(counter);
                 int splitId = getResources().getIdentifier(member_split_id, "id", getPackageName());
                 TextView split_tv = (TextView) findViewById(splitId);

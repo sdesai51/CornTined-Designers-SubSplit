@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Login App</string>
+    <string name="app_name">SubSplit App</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="total_cost">Total Cost</string>
@@ -13,6 +13,3 @@
     <string name="group_subscription">Continue to Group Payment</string>
 
 </resources>
-<!--<resources>-->
-<!--    <string name="app_name">CS465-SubSplit-FunctionalPrototype-Individual</string>-->
-<!--</resources>-->

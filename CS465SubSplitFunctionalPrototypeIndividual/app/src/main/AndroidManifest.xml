@@ -9,15 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CS465SubSplitFunctionalPrototypeIndividual">
-        <activity android:name=".IndividualSubscription"
+        <activity android:name=".Homepage"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"/>
-<!--        <activity android:name=".AddMemberActivity"/>-->
         <activity android:name=".AddMemberActivity" android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -25,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CommunityBoardMain" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".IndividualSubscription" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".DMBoard" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".GroupSubscription" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".IndDMView" android:theme="@style/AppTheme.NoActionBar"/>

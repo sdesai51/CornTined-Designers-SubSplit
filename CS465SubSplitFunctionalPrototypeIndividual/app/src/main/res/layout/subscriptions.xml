@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/theme"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#ec796c">
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -63,6 +65,7 @@
         android:background="#616161">
     </LinearLayout>
     <LinearLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10">
@@ -858,6 +861,12 @@
     </LinearLayout>
 </ScrollView>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="10dp"
+        android:background="#000000"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -865,6 +874,7 @@
         android:layout_marginEnd="17dp"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="4dp"
+        android:background="@color/theme"
         android:orientation="horizontal">
         <ImageButton
             android:id="@+id/individual_subscription_button"

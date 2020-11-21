@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDBFBD"
     tools:context=".GroupSubscription">
 
     <LinearLayout
@@ -502,6 +503,7 @@
             android:layout_marginEnd="17dp"
             android:layout_marginTop="0dp"
             android:layout_marginBottom="4dp"
+            android:layout_weight="1"
             android:orientation="horizontal">
             <ImageButton
                 android:id="@+id/individual_subscription_button"
