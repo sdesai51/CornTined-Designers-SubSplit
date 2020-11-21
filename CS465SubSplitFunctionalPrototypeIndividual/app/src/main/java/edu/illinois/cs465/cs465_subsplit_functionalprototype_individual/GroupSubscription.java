@@ -30,6 +30,7 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
     ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual;
     int numMembers;
     String totalCost, cost;
+    Intent initial_intent;
 //    private EditText searchText;
 //    String totalCost = getIntent().getStringExtra("data");
 
@@ -93,11 +94,17 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
         btnSettings = (ImageButton) findViewById(R.id.settings_button);
         btnSave = (Button) findViewById(R.id.save_button);
 
+
+        initial_intent = getIntent();
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(GroupSubscription.this, IndividualSubscription.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -106,6 +113,10 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(GroupSubscription.this, Subscriptions.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -114,6 +125,10 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(GroupSubscription.this, Subscriptions.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -122,6 +137,10 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(GroupSubscription.this, CommunityBoardMain.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -130,6 +149,10 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(GroupSubscription.this, Subscriptions.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -140,6 +163,10 @@ public class GroupSubscription extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         if (v.getId() == R.id.add_members_button) {
             Intent intent = new Intent(this, AddMemberActivity.class);
+            if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                intent.putExtra("sub_parcel", sub_parcel);
+            }
             startActivity(intent);
             Bundle extras = new Bundle();
             extras.putString("cost_from_group", cost);

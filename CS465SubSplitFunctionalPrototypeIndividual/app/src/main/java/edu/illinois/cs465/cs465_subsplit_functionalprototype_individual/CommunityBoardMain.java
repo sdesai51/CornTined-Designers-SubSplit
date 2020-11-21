@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 public class CommunityBoardMain extends AppCompatActivity {
 
     ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual, btnProfile, btnDMs;
+    Intent initial_intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,10 @@ public class CommunityBoardMain extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(CommunityBoardMain.this, Profile.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -33,6 +39,10 @@ public class CommunityBoardMain extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(CommunityBoardMain.this, DMBoard.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -44,11 +54,17 @@ public class CommunityBoardMain extends AppCompatActivity {
         btnCommunity = (ImageButton) findViewById(R.id.community_board_button);
         btnSettings = (ImageButton) findViewById(R.id.settings_button);
 
+        initial_intent = getIntent();
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(CommunityBoardMain.this, IndividualSubscription.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -57,6 +73,10 @@ public class CommunityBoardMain extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(CommunityBoardMain.this, Subscriptions.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -65,6 +85,10 @@ public class CommunityBoardMain extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(CommunityBoardMain.this, Subscriptions.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -73,6 +97,10 @@ public class CommunityBoardMain extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(CommunityBoardMain.this, CommunityBoardMain.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });

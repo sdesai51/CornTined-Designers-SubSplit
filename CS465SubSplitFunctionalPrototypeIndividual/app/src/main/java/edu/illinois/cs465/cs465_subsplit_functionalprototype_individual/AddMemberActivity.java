@@ -26,6 +26,7 @@ public class AddMemberActivity extends AppCompatActivity {
     private Button finishAddButton;
     ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual;
     String cost;
+    Intent initial_intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class AddMemberActivity extends AppCompatActivity {
         final EditText searchText = (EditText)findViewById(R.id.add_members_search_text);
 
         cost = getIntent().getExtras().getString("cost_from_group");
+        initial_intent = getIntent();
         /*
             Add member Button
         */
@@ -96,6 +98,10 @@ public class AddMemberActivity extends AppCompatActivity {
                 Intent intent = new Intent(AddMemberActivity.this, GroupSubscription.class);
                 intent.putExtra("memberList", memberList);
                 intent.putExtra("cost", cost);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -112,6 +118,10 @@ public class AddMemberActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(AddMemberActivity.this, IndividualSubscription.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -120,6 +130,10 @@ public class AddMemberActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(AddMemberActivity.this, Subscriptions.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -128,6 +142,10 @@ public class AddMemberActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(AddMemberActivity.this, Subscriptions.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -136,6 +154,10 @@ public class AddMemberActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(AddMemberActivity.this, CommunityBoardMain.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -151,6 +173,10 @@ public class AddMemberActivity extends AppCompatActivity {
             case android.R.id.home:
 
                 Intent intent = new Intent(AddMemberActivity.this, GroupSubscription.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
                 finish();
                 return true;

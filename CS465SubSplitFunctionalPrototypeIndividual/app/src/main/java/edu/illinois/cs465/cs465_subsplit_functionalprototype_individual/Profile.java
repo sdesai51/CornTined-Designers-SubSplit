@@ -12,6 +12,7 @@ public class Profile extends AppCompatActivity {
 
     ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual;
     Button btnBack;
+    Intent initial_intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +20,16 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.popup_window);
 
         btnBack = (Button) findViewById(R.id.back_arrow);
+        initial_intent = getIntent();
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(Profile.this, CommunityBoardMain.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });

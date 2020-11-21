@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -33,7 +34,27 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
     EditText edtSubscription, edtCategory, edtTotalCost;
     Spinner selectMonth, selectDay, selectYear, selectRenewal, selectCategory;
     private ImageView imageAddIcon;
-    String total;
+    String total, sub_name;
+    Intent initial_intent;
+
+    public Integer month_to_number(String month) {
+        String[] subscription_name ={
+                "january", "february",
+                "march", "april",
+                "may", "june",
+                "july", "august",
+                "september", "october",
+                "november", "december",
+        };
+        String month_string_normalized = month.toLowerCase();
+        Integer index = Arrays.asList(subscription_name).indexOf(month_string_normalized);
+        if (index != -1){
+            return index + 1;
+        } else {
+            //avoiding errors by just returning a junk number
+            return 0;
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,6 +176,8 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
         btnIndividualSubscription=(Button)findViewById(R.id.individual_subscription);
 
 
+
+
         //Individual button functionality
         btnIndividualSubscription.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -172,10 +195,24 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
 //                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                     Intent intent= new Intent(IndividualSubscription.this,Subscriptions.class);
 //                    intent.putExtra("data",String.valueOf(selectRenewal.getSelectedItem()));
+                    Bundle extras = new Bundle();
+                    extras.putString("cost", edtTotalCost.getText().toString());
+                    extras.putString("subscription_name", edtSubscription.getText().toString());
+                    extras.putString("renewal_date",
+                            String.valueOf(month_to_number(selectMonth.getSelectedItem().toString())) + "/"
+                            + selectDay.getSelectedItem().toString() + "/"
+                            + selectYear.getSelectedItem().toString());
+                    extras.putString("frequency", selectRenewal.getSelectedItem().toString());
+                    intent.putExtras(extras);
+                    if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                        SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                        intent.putExtra("sub_parcel", sub_parcel);
+                    }
                     startActivity(intent);
                 }
             }
         });
+        initial_intent = getIntent();
         btnGroupSubscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -195,6 +232,10 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
                     Bundle extras = new Bundle();
                     extras.putString("cost_from_ind", total);
                     intent.putExtras(extras);
+                    if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                        SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                        intent.putExtra("sub_parcel", sub_parcel);
+                    }
                     startActivity(intent);
 //                }
             }
@@ -212,6 +253,10 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(IndividualSubscription.this, IndividualSubscription.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -220,6 +265,10 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(IndividualSubscription.this, Subscriptions.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -228,6 +277,10 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(IndividualSubscription.this, Subscriptions.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
@@ -236,6 +289,10 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent intent = new Intent(IndividualSubscription.this, CommunityBoardMain.class);
+                if (initial_intent.getParcelableExtra("sub_parcel") != null) {
+                    SubscriptionParcel sub_parcel = initial_intent.getParcelableExtra("sub_parcel");
+                    intent.putExtra("sub_parcel", sub_parcel);
+                }
                 startActivity(intent);
             }
         });
