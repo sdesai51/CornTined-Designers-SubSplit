@@ -144,7 +144,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="sans-serif-light"
-                android:text="Hi! I am a freshman at Illinois taking CHEM 101.It's so hard :(\nI want to use Chegg for the class but broke college student haha. Looking for people to split account with!! Message me if interested :)"
+                android:text="Hi! I am a freshman at Illinois taking CHEM 101.It's so hard and I'm really struggling to understand the concepts :( I want to use Chegg for the class but broke college student haha. Looking for people to split account with!! Message me if interested :)"
                 android:textColor="@color/black"
                 android:textSize="14sp"></TextView>
 
@@ -157,6 +157,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/likebtn"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -167,6 +168,7 @@
                     android:src="@drawable/like"></ImageButton>
 
                 <TextView
+                    android:id="@+id/likect"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="8dp"
@@ -238,7 +240,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:fontFamily="sans-serif-light"
-                        android:text="Interested!! I'm also struggling in CHEM 101 haha"
+                        android:text="I might be really interested! I'm also having a hard time understanding everything at such a fast pace. "
                         android:textColor="#000000"
                         android:typeface="serif"></TextView>
                 </LinearLayout>
@@ -378,7 +380,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="sans-serif-light"
-                android:text="Hey! I am looking for people to split a Netflix account with before the new season of Schitt's Creek releases. "
+                android:text="Hey! I am looking for people to split a Netflix account with before the new season of Schitt's Creek releases. I'm thinking of the $12.99 plan. Is anyone interested?"
                 android:textColor="@color/black"
                 android:textSize="14sp"></TextView>
 
@@ -391,6 +393,7 @@
 
 
                 <ImageButton
+                    android:id="@+id/likebtn2"
                     style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -401,6 +404,7 @@
                     android:src="@drawable/like"></ImageButton>
 
                 <TextView
+                    android:id="@+id/likect2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="8dp"
@@ -437,57 +441,57 @@
                     android:textSize="16sp"></TextView>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/comment4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/comment4"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:orientation="horizontal">-->
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/profile"></ImageView>
+<!--                <ImageView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:scaleType="fitCenter"-->
+<!--                    android:src="@drawable/profile"></ImageView>-->
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:layout_weight="4"
-                    android:orientation="vertical">
+<!--&lt;!&ndash;                <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginStart="3dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_weight="4"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:orientation="vertical">&ndash;&gt;-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Zikun Chen"
-                        android:textColor="#000000"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        android:typeface="serif"></TextView>
+<!--&lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:text="Zikun Chen"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:textColor="#000000"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:textSize="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:textStyle="bold"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:typeface="serif"></TextView>&ndash;&gt;-->
 
-                    <TextView
-                        android:layout_width="229dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:fontFamily="sans-serif-light"
-                        android:text="Hey, I already have an account and want to save a little bit more money."
-                        android:textColor="#000000"
-                        android:typeface="serif"></TextView>
-                </LinearLayout>
+<!--&lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="229dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_marginTop="2dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:fontFamily="sans-serif-light"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:text="Hey, I already have an account and want to save a little bit more money."&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:textColor="#000000"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:typeface="serif"></TextView>&ndash;&gt;-->
+<!--&lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="13 hours ago"
-                    android:textColor="#000000"
-                    android:textSize="11sp"
-                    android:textStyle="italic"
-                    android:typeface="serif"></TextView>
-            </LinearLayout>
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="2dp"-->
+<!--                    android:layout_marginEnd="10dp"-->
+<!--                    android:text="13 hours ago"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="11sp"-->
+<!--                    android:textStyle="italic"-->
+<!--                    android:typeface="serif"></TextView>-->
+<!--            </LinearLayout>-->
         </LinearLayout>
         <View
             android:layout_width="match_parent"

@@ -8,10 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class CommunityBoardMain extends AppCompatActivity {
 
-    ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual, btnProfile, btnDMs;
+    ImageButton btnAdd, btnGroup, btnCommunity, btnSettings, btnIndividual, btnProfile, btnDMs, btnLiked, btnLiked2;
     Intent initial_intent;
 
     @Override
@@ -44,6 +47,26 @@ public class CommunityBoardMain extends AppCompatActivity {
                     intent.putExtra("sub_parcel", sub_parcel);
                 }
                 startActivity(intent);
+            }
+        });
+
+        btnLiked = (ImageButton)findViewById(R.id.likebtn);
+        btnLiked.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnLiked.setImageResource(R.drawable.like_highlight);
+                TextView tv = (TextView)findViewById(R.id.likect);
+                tv.setText("5");
+            }
+        });
+
+        btnLiked2 = (ImageButton)findViewById(R.id.likebtn2);
+        btnLiked2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnLiked2.setImageResource(R.drawable.like_highlight);
+                TextView tv = (TextView)findViewById(R.id.likect2);
+                tv.setText("13");
             }
         });
 
