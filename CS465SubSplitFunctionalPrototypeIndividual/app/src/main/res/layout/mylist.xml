@@ -93,6 +93,15 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="right|bottom">
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="0px"
+                android:scaleType="fitCenter"
+                android:tint="#ab1f00"
+                android:background="@color/white"
+                android:src="@drawable/delete">
+            </ImageButton>
             <!--<TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
