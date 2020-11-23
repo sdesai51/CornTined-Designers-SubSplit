@@ -168,42 +168,23 @@ public class Subscriptions extends AppCompatActivity {
 
         MyListAdapter adapter=new MyListAdapter(this, subscription_name, frequency,subscription_type,cost,renewal_date,paid_status,imgid);
         list=(ListView)findViewById(R.id.list);
+        list.setItemsCanFocus(false);
         list.setAdapter(adapter);
 
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
             public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
                 // TODO Auto-generated method stub
-                if(position == 0) {
-                    //code specific to first list item
-                    Toast.makeText(getApplicationContext(),"Place Your First Option Code",Toast.LENGTH_SHORT).show();
-                }
-
-                else if(position == 1) {
-                    //code specific to 2nd list item
-                    Toast.makeText(getApplicationContext(),"Place Your Second Option Code",Toast.LENGTH_SHORT).show();
-                }
-
-                else if(position == 2) {
-
-                    Toast.makeText(getApplicationContext(),"Place Your Third Option Code",Toast.LENGTH_SHORT).show();
-                }
-                else if(position == 3) {
-
-                    Toast.makeText(getApplicationContext(),"Place Your Forth Option Code",Toast.LENGTH_SHORT).show();
-                }
-                else if(position == 4) {
-
-                    Toast.makeText(getApplicationContext(),"Place Your Fifth Option Code",Toast.LENGTH_SHORT).show();
-                }
-
+                Intent intent = new Intent(Subscriptions.this, IndividualSubscription.class);
+                SubscriptionParcel sub_parcel = new SubscriptionParcel(subscription_name,subscription_name_lowercase,
+                        frequency,subscription_type,cost,renewal_date,paid_status,imgid);
+                intent.putExtra("sub_parcel", sub_parcel);
+                intent.putExtra("name", subscription_name[position]);
+                startActivity(intent);
             }
         });
         ////////////
-
-
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dp"
+    android:descendantFocusability="blocksDescendants"
     android:background="@color/white"
     android:orientation="horizontal">
     <LinearLayout
@@ -94,13 +95,15 @@
             android:orientation="horizontal"
             android:gravity="right|bottom">
             <ImageButton
+                android:id="@+id/delbtn"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:padding="0px"
                 android:scaleType="fitCenter"
                 android:tint="#ab1f00"
                 android:background="@color/white"
-                android:src="@drawable/delete">
+                android:src="@drawable/delete"
+                android:onClick="myClickHandler">
             </ImageButton>
             <!--<TextView
                 android:layout_width="wrap_content"

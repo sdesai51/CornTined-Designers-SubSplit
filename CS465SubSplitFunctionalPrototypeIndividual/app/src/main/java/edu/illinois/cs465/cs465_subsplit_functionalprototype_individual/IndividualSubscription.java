@@ -213,6 +213,11 @@ public class IndividualSubscription extends AppCompatActivity implements OnItemS
             }
         });
         initial_intent = getIntent();
+        if (initial_intent.getExtras() != null) {
+            if (initial_intent.getExtras().getString("name") != null) {
+                edtSubscription.setText(initial_intent.getExtras().getString("name"));
+            }
+        }
         btnGroupSubscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
